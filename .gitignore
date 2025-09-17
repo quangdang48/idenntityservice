@@ -1,0 +1,50 @@
+### Build artifacts ###
+IndentityService/**/bin/
+IndentityService/**/obj/
+IndentityService/**/out/
+
+### User-specific files ###
+IndentityService/**/*.user
+IndentityService/**/*.suo
+IndentityService/**/*.userosscache
+*.sln.docstates
+
+### IDE settings ###
+# JetBrains Rider / IntelliJ
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+
+### Logs ###
+*.log
+
+### NuGet ###
+IndentityService/**/*.nupkg
+IndentityService/**/*.snupkg
+IndentityService/**/*.nuspec
+IndentityService/**/packages/
+IndentityService/**/.nuget/
+
+### ASP.NET / Minimal API configs ###
+IndentityService/**/appsettings.*.json    # giữ file mặc định (nếu cần)
+IndentityService/**/launchSettings.json
+IndentityService/**/dotnet-watch.json
+
+### Temporary files ###
+IndentityService/**/*.tmp
+IndentityService/**/*.temp
+IndentityService/**/.vs/
+IndentityService/**/*.DS_Store
+
+### Test results ###
+TestResults/
+*.trx
+
+### Entity Framework migrations (optional) ###
+Migrations/
+
+### Database files ###
+./IndentityService/*.db
+IndentityService/**/*.sqlite
