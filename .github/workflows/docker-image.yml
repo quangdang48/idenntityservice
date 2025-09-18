@@ -20,16 +20,16 @@ jobs:
           --file Dockerfile \
           --tag my-app:$(date +%s)
 
-    # - name: Setup SSH
-    #   uses: webfactory/ssh-agent@v0.9.0
-    #   with:
-    #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    # - name: Deploy to server
-    #   run: |
-    #     ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
-    #       cd /home/${{ secrets.SERVER_USER }}/my-project
-    #       git pull origin deploy
-    #       docker compose down
-    #       docker compose up -d --build
-    #     EOF
+    - name: Deploy to server
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+          cd ${{ secrets.PATH_DIR_PROJECT }}
+          git pull origin deploy
+          docker compose down
+          docker compose up -d --build
+        EOF
