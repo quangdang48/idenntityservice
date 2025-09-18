@@ -6,7 +6,7 @@ var app = builder.Build();
 // Wellcome page
 app.MapGet("/", () => "Hello World!");
 // Test page 
-app.MapGet("/test", () => "This is a test page - add deploy branch");
+app.MapGet("/test", () => "This is a test page");
 // Login page 
 app.MapPost("/login", (UserDto userDto) =>
 {
