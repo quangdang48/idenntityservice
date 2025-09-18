@@ -12,7 +12,7 @@ app.MapPost("/login", (UserDto userDto) =>
 {
     if (userDto.Username == "admin" && userDto.Password == "password")
     {
-        return Results.Ok("Login successful!");
+        return Results.Ok("Login successful Quang!");
     }
     return Results.Unauthorized();
 });
