@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 // Wellcome page
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Hello World VietNam!");
 // Test page 
 app.MapGet("/test", () => "This is a test page");
 // Login page 
