@@ -31,5 +31,5 @@ jobs:
           cd ${{ secrets.PATH_DIR_PROJECT }}
           git pull origin deploy
           docker compose down
-          docker compose up -d --build
+          docker compose up -d --build --force-recreate
         EOF
