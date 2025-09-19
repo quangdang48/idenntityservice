@@ -10,7 +10,7 @@ app.MapGet("/test", () => "This is a test page");
 // Login page 
 app.MapPost("/login", (UserDto userDto) =>
 {
-    if (userDto.Username == "admin" && userDto.Password == "password")
+    if (userDto.Username == "admin" && userDto.Password == "password2")
     {
         return Results.Ok("Login successful Test CICD");
     }
